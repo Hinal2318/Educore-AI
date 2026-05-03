@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* ── Smooth scrolling ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Bounce animation delays for thinking dots ── */
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* ── Textarea auto-resize feel ── */
+textarea {
+  line-height: 1.5;
+}
+
+/* ── Shimmer Effect for Buttons ── */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
