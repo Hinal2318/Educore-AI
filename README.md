@@ -57,14 +57,14 @@ DE project/
 └── README.md            # Project documentation
 ```
 
-## Usage Flow
-1. **Register/Login**: Users can sign up as either a "faculty" or "student".
-2. **Faculty Flow**: 
+#Usage Flow
+1. Register/Login: Users can sign up as either a "faculty" or "student".
+2. Faculty Flow: 
    - Add new subjects.
    - Upload PDF materials for those subjects.
    - Generate quizzes from the uploaded materials.
    - Monitor student performance through the analytics dashboard.
-3. **Student Flow**:
+3. Student Flow:
    - View available subjects and take generated quizzes.
    - Get immediate feedback and explanations for correct answers.
    - View personal performance history.
