@@ -12,7 +12,7 @@ Responsive & Accessible UI: Fully responsive mobile-first layouts with dynamic L
 
 # Tech Stack
 
- Frontend
+Frontend
 Framework: React 18 with Vite
 Styling: Tailwind CSS
 Routing: React Router v6

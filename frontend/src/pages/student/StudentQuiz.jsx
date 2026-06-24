@@ -69,7 +69,7 @@ function QuizCard({ quiz, onStart }) {
               <div className="w-5 h-5 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center border border-gray-300 dark:border-gray-700">
                 <span className="text-[10px] font-bold text-gray-700 dark:text-gray-300">{creatorInitial}</span>
               </div>
-              <p className="text-xs text-gray-600 dark:text-gray-500 dark:text-gray-400 font-medium truncate">
+              <p className="text-xs text-gray-600 dark:text-gray-300 font-medium truncate">
                 by {quiz.created_by ?? 'Faculty'}
               </p>
             </div>
@@ -81,7 +81,7 @@ function QuizCard({ quiz, onStart }) {
 
         {/* Middle: Stats */}
         <div className="grid grid-cols-2 gap-3 mt-auto">
-          <div className="flex flex-col gap-1 p-3 rounded-2xl bg-white dark:bg-gray-800/40 border border-gray-200 dark:border-gray-800/60 group-hover:bg-white dark:bg-gray-800/60 transition-colors">
+          <div className="flex flex-col gap-1 p-3 rounded-2xl bg-white dark:bg-gray-800/40 border border-gray-200 dark:border-gray-800/60 group-hover:bg-white dark:group-hover:bg-gray-800/60 transition-colors">
             <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-500">
               <HelpCircle className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
               <span className="text-[10px] font-semibold uppercase tracking-wider">Questions</span>
@@ -89,7 +89,7 @@ function QuizCard({ quiz, onStart }) {
             <p className="text-lg font-bold text-gray-900 dark:text-white ml-5">{quiz.num_questions}</p>
           </div>
           
-          <div className="flex flex-col gap-1 p-3 rounded-2xl bg-white dark:bg-gray-800/40 border border-gray-200 dark:border-gray-800/60 group-hover:bg-white dark:bg-gray-800/60 transition-colors">
+          <div className="flex flex-col gap-1 p-3 rounded-2xl bg-white dark:bg-gray-800/40 border border-gray-200 dark:border-gray-800/60 group-hover:bg-white dark:group-hover:bg-gray-800/60 transition-colors">
             <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-500">
               <Clock className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
               <span className="text-[10px] font-semibold uppercase tracking-wider">Time</span>

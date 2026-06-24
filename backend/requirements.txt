@@ -9,6 +9,7 @@ sentence-transformers
 faiss-cpu
 pymupdf
 pymongo
+dnspython
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart

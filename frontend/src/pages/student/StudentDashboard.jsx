@@ -193,7 +193,8 @@ export default function StudentDashboard() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-        </motion.div>
+        </div>
+      </motion.div>
       )}
 
       {/* ── Recent activity ── */}
