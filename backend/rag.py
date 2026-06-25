@@ -4,7 +4,6 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv
 
@@ -60,11 +59,28 @@ def chunk_text(raw_text: str, subject_id: str, filename: str) -> tuple[list[str]
 # ─────────────────────────────────────────────
 
 def get_embeddings():
-    """Return a local sentence-transformers embedding model (free, no API key)."""
-    return HuggingFaceEmbeddings(
-        model_name="all-MiniLM-L6-v2",
-        model_kwargs={"device": "cpu"},
-        encode_kwargs={"normalize_embeddings": True},
+    """Return an embedding model based on configuration:
+    1. If HUGGINGFACEHUB_API_TOKEN / HF_TOKEN is set, use HuggingFaceHubEmbeddings.
+    2. If OPENAI_API_KEY is set, use OpenAIEmbeddings.
+    3. Fallback to FastEmbedEmbeddings (lightweight ONNX runtime CPU, no PyTorch).
+    """
+    hf_token = os.getenv("HUGGINGFACEHUB_API_TOKEN") or os.getenv("HF_TOKEN")
+    if hf_token:
+        from langchain_community.embeddings import HuggingFaceHubEmbeddings
+        return HuggingFaceHubEmbeddings(
+            repo_id="sentence-transformers/all-MiniLM-L6-v2",
+            huggingfacehub_api_token=hf_token
+        )
+
+    openai_key = os.getenv("OPENAI_API_KEY")
+    if openai_key:
+        from langchain_openai import OpenAIEmbeddings
+        return OpenAIEmbeddings(openai_api_key=openai_key)
+
+    from langchain_community.embeddings import FastEmbedEmbeddings
+    return FastEmbedEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2",
+        cache_dir=str(Path(__file__).parent / "fastembed_cache")
     )
 
 

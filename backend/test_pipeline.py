@@ -18,7 +18,7 @@ import sys
 import json
 from pathlib import Path
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://127.0.0.1:8000"
 TEST_PDF = Path(__file__).parent / "uploads" / "test_sample.pdf"
 
 
