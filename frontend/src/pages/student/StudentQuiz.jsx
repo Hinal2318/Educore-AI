@@ -7,8 +7,7 @@ import {
   Search, Play, ClipboardList, Clock, HelpCircle,
   Zap, AlertCircle, Loader2, ChevronRight, Filter,
 } from 'lucide-react'
-
-const API = 'http://127.0.0.1:8000'
+import { API_URL as API } from '../../config'
 
 const container = {
   hidden: { opacity: 0 },

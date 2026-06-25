@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useAuth } from '../context/AuthContext'
-
-const API = 'http://127.0.0.1:8000'
+import { API_URL as API } from '../config'
 
 // Animated typing dots
 function ThinkingDots() {

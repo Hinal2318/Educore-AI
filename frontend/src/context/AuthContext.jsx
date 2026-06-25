@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../config';
 
 const AuthContext = createContext();
 
@@ -25,7 +26,7 @@ export function AuthProvider({ children }) {
         formData.append('username', username);
         formData.append('password', password);
 
-        const response = await fetch('http://localhost:8000/auth/login', {
+        const response = await fetch(`${API_URL}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -63,7 +64,7 @@ export function AuthProvider({ children }) {
         if (branch) payload.branch = branch;
         if (semester) payload.semester = Number(semester);
 
-        const response = await fetch('http://localhost:8000/auth/register', {
+        const response = await fetch(`${API_URL}/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

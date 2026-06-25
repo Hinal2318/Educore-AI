@@ -8,8 +8,7 @@ import {
   ArrowRight, Loader2, Sparkles, CheckCircle2, Clock,
 } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from 'recharts'
-
-const API = 'http://127.0.0.1:8000'
+import { API_URL as API } from '../../config'
 
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } }
 const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } } }

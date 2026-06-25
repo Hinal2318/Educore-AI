@@ -6,8 +6,7 @@ import {
   History, Brain, Clock, Copy, ExternalLink,
   CheckCircle2, Loader2, Search, HelpCircle,
 } from 'lucide-react'
-
-const API = 'http://127.0.0.1:8000'
+import { API_URL as API } from '../../config'
 
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.06 } } }
 const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } } }

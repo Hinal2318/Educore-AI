@@ -3,8 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useAuth } from '../context/AuthContext'
-
-const API = 'http://127.0.0.1:8000'
+import { API_URL as API } from '../config'
 
 export default function QuizPage() {
   const { link_id } = useParams()

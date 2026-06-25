@@ -10,8 +10,7 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell,
   LineChart, Line, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend,
 } from 'recharts'
-
-const API = 'http://127.0.0.1:8000'
+import { API_URL as API } from '../../config'
 
 const container = {
   hidden: { opacity: 0 },
