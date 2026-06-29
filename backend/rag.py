@@ -79,8 +79,7 @@ def get_embeddings():
 
     from langchain_community.embeddings import FastEmbedEmbeddings
     return FastEmbedEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2",
-        cache_dir=str(Path(__file__).parent / "fastembed_cache")
+        model_name="sentence-transformers/all-MiniLM-L6-v2"
     )
 
 
