@@ -10,7 +10,7 @@ pymupdf
 pymongo
 dnspython
 python-jose[cryptography]
-passlib[bcrypt]
+bcrypt
 python-multipart
 python-dotenv
 openai
