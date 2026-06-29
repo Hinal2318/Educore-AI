@@ -160,7 +160,7 @@ export default function LoginPage() {
       // Better error messages
       const msg = err.message || ''
       if (msg.includes('fetch') || msg.includes('refused') || msg.includes('network')) {
-        setError('Cannot reach the server. Make sure the backend is running on port 8000.')
+        setError('Cannot reach the server. Please check your internet connection or verify the server status.')
       } else if (msg.includes('Incorrect') || msg.includes('unauthorized')) {
         setError('Wrong username or password. Please try again.')
       } else if (msg.includes('already registered') || msg.includes('exists')) {
