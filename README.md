@@ -31,31 +31,9 @@ Authentication: JWT Auth (python-jose, passlib)
 # Prerequisites
 - Node.js (v18+)
 - Python (3.9+)
-- MongoDB (running locally on default port 27017, or update URI)
-- OpenAI API Key
+- MongoDB
+- Grok API Key
 
-
-# Folder Structure
-
-DE project/
-├── backend/
-│   ├── main.py          # FastAPI application entry point
-│   ├── models.py        # Pydantic models for request/response validation
-│   ├── database.py      # MongoDB connection setup
-│   ├── auth.py          # JWT Authentication logic
-│   ├── rag.py           # RAG logic (Ingestion, Q&A, MCQ Generation)
-│   ├── requirements.txt # Python dependencies
-│   └── uploads/         # Directory for storing uploaded PDF files
-├── frontend/
-│   ├── src/             # React application source code
-│   │   ├── pages/       # Page components (Dashboard, Faculty, Student portals)
-│   │   ├── components/  # Reusable UI components
-│   │   └── ...
-│   ├── package.json     # Node.js dependencies and scripts
-│   ├── vite.config.js   # Vite configuration
-│   └── tailwind.config.js # Tailwind CSS configuration
-└── README.md            # Project documentation
-```
 
 #Usage Flow
 1. Register/Login: Users can sign up as either a "faculty" or "student".
@@ -69,3 +47,5 @@ DE project/
    - Get immediate feedback and explanations for correct answers.
    - View personal performance history.
    - Receive AI-generated suggestions on what topics to focus on next.
+  
+     Live on: https://educore-ai-zeta.vercel.app
